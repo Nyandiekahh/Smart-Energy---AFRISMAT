@@ -475,3 +475,377 @@
     font-size: 1.5rem;
   }
 }
+
+/* ML Insights Section */
+.ml-insights-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.insights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.insights-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.btn-close-insights {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-close-insights:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* Insights Grid */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.insight-card {
+  background: white;
+  color: #2d3748;
+  border-radius: 12px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.insight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.insight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  transition: width 0.3s;
+}
+
+.insight-card.primary::before { background: #667eea; }
+.insight-card.success::before { background: #52b788; }
+.insight-card.warning::before { background: #ffa500; }
+.insight-card.info::before { background: #2196F3; }
+
+.insight-card:hover::before {
+  width: 100%;
+  opacity: 0.05;
+}
+
+.insight-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.insight-content h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+/* Prediction Details */
+.prediction-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.prediction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.prediction-label {
+  font-size: 0.9rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.prediction-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.trend-badge {
+  padding: 0.4rem 0.875rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.trend-badge.increasing {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.trend-badge.decreasing {
+  background: #d4edda;
+  color: #155724;
+}
+
+.trend-badge.stable {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.confidence-badge {
+  padding: 0.4rem 0.875rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.confidence-badge.high {
+  background: #d4edda;
+  color: #155724;
+}
+
+.confidence-badge.medium {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.confidence-badge.low {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Recommendation Section */
+.recommendation-text {
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.recommended-amounts {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.amount-chip {
+  background: linear-gradient(135deg, #52b788 0%, #40916c 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+.amount-chip.optimal {
+  background: linear-gradient(135deg, #2196F3 0%, #1976d2 100%);
+}
+
+.amount-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.chip-label {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.chip-amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Runway Display */
+.runway-display {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.runway-days {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1;
+}
+
+.runway-label {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-top: 0.5rem;
+}
+
+.runway-date {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+}
+
+.urgency-badge {
+  padding: 0.4rem 0.875rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.urgency-badge.critical {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.urgency-badge.warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.urgency-badge.safe {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* Pattern Section */
+.pattern-text {
+  font-size: 0.95rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.pattern-comparison {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.pattern-stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.difference-badge {
+  padding: 0.4rem 0.875rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  background: #e3f2fd;
+  color: #1565c0;
+  display: inline-block;
+}
+
+/* Anomalies Alert */
+.anomalies-alert {
+  background: rgba(255, 255, 255, 0.95);
+  color: #856404;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-left: 4px solid #ffc107;
+}
+
+.alert-icon {
+  font-size: 1.5rem;
+}
+
+.alert-text {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Responsive ML Insights */
+@media (max-width: 968px) {
+  .insights-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .ml-insights-section {
+    padding: 1.5rem;
+  }
+
+  .insights-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommended-amounts {
+    flex-direction: column;
+  }
+
+  .amount-chip {
+    width: 100%;
+  }
+
+  .runway-days {
+    font-size: 2.5rem;
+  }
+}
