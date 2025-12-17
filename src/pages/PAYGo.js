@@ -12,7 +12,7 @@ const PAYGo = () => {
   const balance = {
     amount: 245.50,
     daysRemaining: 12,
-    lastTopUp: 'Dec 10, 2024',
+    lastTopUp: 'Just Now',
     lastTopUpAmount: 500
   };
 
@@ -21,11 +21,11 @@ const PAYGo = () => {
 
   // Payment history data
   const paymentHistory = [
-    { id: 1, date: 'Dec 10, 2024', time: '02:30 PM', type: 'M-Pesa', amount: 500, status: 'Completed', reference: 'RKJ8H3N2LP' },
-    { id: 2, date: 'Dec 5, 2024', time: '11:15 AM', type: 'M-Pesa', amount: 1000, status: 'Completed', reference: 'QWE4R5T6YU' },
-    { id: 3, date: 'Nov 28, 2024', time: '04:45 PM', type: 'Token', amount: 200, status: 'Completed', reference: 'TOKEN-123456' },
-    { id: 4, date: 'Nov 20, 2024', time: '09:20 AM', type: 'M-Pesa', amount: 500, status: 'Completed', reference: 'ASD3F4G5HJ' },
-    { id: 5, date: 'Nov 15, 2024', time: '03:10 PM', type: 'M-Pesa', amount: 300, status: 'Failed', reference: 'ZXC6V7B8NM' },
+    { id: 1, date: 'Dec 17, 2025', time: 'Just Now', type: 'M-Pesa', amount: 500, status: 'Completed', reference: 'RKJ8H3N2LP' },
+    { id: 2, date: 'Dec 5, 2025', time: '11:15 AM', type: 'M-Pesa', amount: 1000, status: 'Completed', reference: 'QWE4R5T6YU' },
+    { id: 3, date: 'Nov 28, 2025', time: '04:45 PM', type: 'Token', amount: 200, status: 'Completed', reference: 'TOKEN-123456' },
+    { id: 4, date: 'Nov 20, 2025', time: '09:20 AM', type: 'M-Pesa', amount: 500, status: 'Completed', reference: 'ASD3F4G5HJ' },
+    { id: 5, date: 'Nov 15, 2025', time: '03:10 PM', type: 'M-Pesa', amount: 300, status: 'Failed', reference: 'ZXC6V7B8NM' },
   ];
 
   const handleMpesaPayment = async (e) => {

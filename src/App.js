@@ -8,6 +8,10 @@ import Overview from './pages/Overview';
 import Devices from './pages/Devices';
 import PAYGo from './pages/PAYGo';
 import Monitoring from './pages/Monitoring';
+import Analytics from './pages/Analytics';
+import Billing from './pages/Billing';
+import Settings from './pages/Settings';
+import Support from './pages/Support';
 import './App.css';
 
 function App() {
@@ -25,10 +29,10 @@ function App() {
             <Route path="devices" element={<Devices />} />
             <Route path="monitoring" element={<Monitoring />} />
             <Route path="paygo" element={<PAYGo />} />
-            <Route path="analytics" element={<div>Analytics Page - Coming Soon</div>} />
-            <Route path="billing" element={<div>Billing Page - Coming Soon</div>} />
-            <Route path="settings" element={<div>Settings Page - Coming Soon</div>} />
-            <Route path="support" element={<div>Support Page - Coming Soon</div>} />
+            <Route path="analytics" element={<Analytics />} />
+            <Route path="billing" element={<Billing />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="support" element={<Support />} />
           </Route>
 
           {/* Catch all - redirect to home */}

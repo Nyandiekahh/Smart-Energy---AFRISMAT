@@ -1,0 +1,360 @@
+/* Billing Page - Clean White Theme */
+.billing-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Billing Summary */
+.billing-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card-billing {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s;
+}
+
+.summary-card-billing:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.summary-icon-billing {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.summary-content-billing {
+  flex: 1;
+}
+
+.summary-label-billing {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.summary-value-billing {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Filters */
+.billing-filters {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.filter-group select,
+.filter-group input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.filter-group select:focus,
+.filter-group input:focus {
+  outline: none;
+  border-color: #52b788;
+  box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.1);
+}
+
+.invoice-count {
+  font-size: 0.9rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+/* Table Specific Styles */
+.invoice-id {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.billing-period {
+  font-weight: 600;
+  color: #52b788;
+}
+
+.usage-value {
+  font-weight: 600;
+  color: #2196F3;
+}
+
+.amount-value {
+  font-weight: 700;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.payment-method {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.status-badge.paid {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status-badge.overdue {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-action-small {
+  background: transparent;
+  color: #52b788;
+  border: 1px solid #52b788;
+  padding: 0.4rem 0.875rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-action-small:hover {
+  background: #52b788;
+  color: white;
+}
+
+.btn-action-small.pay {
+  color: #FF6B35;
+  border-color: #FF6B35;
+}
+
+.btn-action-small.pay:hover {
+  background: #FF6B35;
+  color: white;
+}
+
+/* Payment Methods */
+.payment-methods-section {
+  margin: 2rem 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.payment-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.payment-method-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.payment-method-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.payment-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  border-radius: 12px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.payment-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.payment-description {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.payment-status {
+  font-size: 0.75rem;
+  padding: 0.4rem 0.875rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.payment-status.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.payment-status.inactive {
+  background: #e9ecef;
+  color: #6c757d;
+}
+
+/* Billing Info */
+.billing-info-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.info-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.info-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.25rem;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.info-value {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.tips-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tips-list li {
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #4a5568;
+  padding-left: 2.5rem;
+  position: relative;
+}
+
+.tips-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0.875rem;
+  color: #52b788;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .billing-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .billing-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .billing-info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-action-small {
+    width: 100%;
+  }
+}
