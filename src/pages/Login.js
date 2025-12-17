@@ -29,91 +29,37 @@ const Login = () => {
     }
   };
 
-  const validateForm = () => {
-    const newErrors = {};
-
-    if (!formData.email) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
-    }
-
-    if (!formData.password) {
-      newErrors.password = 'Password is required';
-    } else if (formData.password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
 
     setLoading(true);
 
     try {
-      // DEMO MODE: Use demo credentials for testing without backend
-      // Demo credentials: email: demo@smartenergy.africa, password: demo123
+      // AUTO-LOGIN: Automatically log in without validation
+      const autoUser = {
+        id: 1,
+        first_name: 'Demo',
+        last_name: 'User',
+        email: 'demo@smartenergy.africa',
+        country: 'Kenya',
+        phone: '+254722114521'
+      };
       
-      const isDemoLogin = formData.email === 'demo@smartenergy.africa' && formData.password === 'demo123';
+      const autoToken = 'auto_token_' + Date.now();
       
-      if (isDemoLogin) {
-        // Demo login - simulate successful authentication
-        const demoUser = {
-          id: 1,
-          first_name: 'Demo',
-          last_name: 'User',
-          email: 'demo@smartenergy.africa',
-          country: 'Kenya',
-          phone: '+254722114521'
-        };
-        
-        const demoToken = 'demo_token_' + Date.now();
-        
-        // Store in localStorage
-        localStorage.setItem('token', demoToken);
-        localStorage.setItem('user', JSON.stringify(demoUser));
-        
-        // Navigate to dashboard
-        setTimeout(() => {
-          navigate('/dashboard');
-        }, 500);
-      } else {
-        // Try real backend API
-        const response = await axios.post('http://localhost:8000/api/auth/login/', {
-          email: formData.email,
-          password: formData.password
-        });
-
-        // Store token in localStorage
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('user', JSON.stringify(response.data.user));
-
-        // Navigate to dashboard
+      // Store in localStorage
+      localStorage.setItem('token', autoToken);
+      localStorage.setItem('user', JSON.stringify(autoUser));
+      
+      // Navigate to dashboard after brief delay
+      setTimeout(() => {
         navigate('/dashboard');
-      }
+      }, 500);
+      
     } catch (error) {
-      if (error.response) {
-        // Server responded with error
-        setErrors({
-          general: error.response.data.message || 'Invalid credentials. Please try again.'
-        });
-      } else if (error.request) {
-        // Request made but no response - suggest demo mode
-        setErrors({
-          general: 'Unable to connect to server. Try demo login: demo@smartenergy.africa / demo123'
-        });
-      } else {
-        setErrors({
-          general: 'An unexpected error occurred. Please try again.'
-        });
-      }
+      setErrors({
+        general: 'An unexpected error occurred. Please try again.'
+      });
     } finally {
       setLoading(false);
     }
@@ -232,16 +178,16 @@ const Login = () => {
               </p>
             </div>
 
-            {/* Demo Mode Banner */}
+            {/* Auto-Login Info Banner */}
             <motion.div 
               className="demo-banner"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <span className="demo-icon">🎯</span>
+              <span className="demo-icon">🚀</span>
               <div className="demo-content">
-                <strong>Demo Mode Available!</strong>
-                <p>Email: demo@smartenergy.africa | Password: demo123</p>
+                <strong>Auto-Login Enabled!</strong>
+                <p>Just click "Sign In" to access the dashboard</p>
               </div>
             </motion.div>
 
