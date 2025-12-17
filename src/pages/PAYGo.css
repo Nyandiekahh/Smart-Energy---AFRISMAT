@@ -1,0 +1,477 @@
+/* PAYGo Page - Clean White Theme */
+.paygo-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Balance Section */
+.balance-section {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.balance-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s;
+}
+
+.balance-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.balance-card.main-balance {
+  background: linear-gradient(135deg, #52b788 0%, #40916c 100%);
+  color: white;
+  border: none;
+}
+
+.balance-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.main-balance .balance-icon {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.balance-icon.blue {
+  background: #cce5ff;
+}
+
+.balance-icon.green {
+  background: #d4edda;
+}
+
+.balance-icon.purple {
+  background: #e7d6f5;
+}
+
+.balance-content {
+  flex: 1;
+}
+
+.balance-label {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.balance-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.balance-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.balance-info,
+.balance-subtext {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.main-balance .balance-info {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.balance-subtext {
+  color: #718096;
+}
+
+/* Payment Section */
+.payment-section {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.payment-form-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Tabs */
+.tab-header {
+  display: flex;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 1.25rem 1.5rem;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #718096;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+  background: #f8f9fa;
+  color: #2d3748;
+}
+
+.tab-btn.active {
+  color: #52b788;
+  border-bottom-color: #52b788;
+  background: #f8f9fa;
+}
+
+.tab-icon {
+  font-size: 1.25rem;
+}
+
+.tab-content {
+  padding: 2rem;
+}
+
+/* Form Section */
+.form-section {
+  max-width: 500px;
+}
+
+.form-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.form-section-desc {
+  font-size: 0.95rem;
+  color: #718096;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #52b788;
+  box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.1);
+}
+
+.input-with-prefix {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.input-with-prefix:focus-within {
+  border-color: #52b788;
+  box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.1);
+}
+
+.input-prefix {
+  padding: 0.875rem 1rem;
+  background: #f8f9fa;
+  font-weight: 600;
+  color: #2d3748;
+  border-right: 1px solid #e9ecef;
+}
+
+.input-with-prefix input {
+  border: none;
+  flex: 1;
+  padding: 0.875rem 1rem;
+}
+
+.input-with-prefix input:focus {
+  box-shadow: none;
+}
+
+.token-input {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.input-hint {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-top: 0.5rem;
+}
+
+/* Quick Amounts */
+.quick-amounts {
+  margin: 2rem 0;
+}
+
+.quick-amounts-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #718096;
+  margin-bottom: 1rem;
+}
+
+.quick-amounts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.quick-amount-btn {
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  background: white;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #2d3748;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quick-amount-btn:hover {
+  border-color: #52b788;
+  background: #f8f9fa;
+}
+
+.quick-amount-btn.selected {
+  border-color: #52b788;
+  background: rgba(82, 183, 136, 0.1);
+  color: #52b788;
+}
+
+/* Buttons */
+.btn-primary.full-width {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Payment Info */
+.payment-info {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-left: 3px solid #52b788;
+  border-radius: 6px;
+}
+
+.info-text {
+  font-size: 0.85rem;
+  color: #4a5568;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  line-height: 1.6;
+}
+
+.info-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Tips Card */
+.tips-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.tips-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+}
+
+.tips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.tip-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.tip-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.tip-content h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.tip-content p {
+  font-size: 0.85rem;
+  color: #718096;
+  line-height: 1.5;
+}
+
+/* Payment History Table */
+.payment-date {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.payment-time {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.payment-method {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.payment-amount {
+  font-weight: 700;
+  color: #52b788;
+  font-size: 1rem;
+}
+
+.payment-reference {
+  color: #718096;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+}
+
+.status-badge.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.failed {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .balance-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .balance-section {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-amounts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tab-btn {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .tab-content {
+    padding: 1.5rem;
+  }
+
+  .balance-amount {
+    font-size: 2rem;
+  }
+
+  .balance-number {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-amounts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .balance-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}

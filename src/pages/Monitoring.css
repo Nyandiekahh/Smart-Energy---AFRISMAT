@@ -1,0 +1,502 @@
+/* Monitoring Page - Clean White Theme */
+.monitoring-page {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Page Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* Time Range Selector */
+.time-range-selector {
+  display: flex;
+  gap: 0.5rem;
+  background: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.range-btn {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  background: transparent;
+  color: #718096;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.range-btn:hover {
+  background: #f8f9fa;
+  color: #2d3748;
+}
+
+.range-btn.active {
+  background: #52b788;
+  color: white;
+}
+
+/* Live Metrics */
+.live-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #52b788;
+  transition: width 0.3s;
+}
+
+.metric-card:hover::before {
+  width: 100%;
+  opacity: 0.05;
+}
+
+.metric-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.metric-card.voltage::before { background: #52b788; }
+.metric-card.current::before { background: #2196F3; }
+.metric-card.power::before { background: #FF6B35; }
+.metric-card.frequency::before { background: #5E35B1; }
+.metric-card.temperature::before { background: #FFC107; }
+
+.metric-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.metric-info {
+  flex: 1;
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  color: #718096;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.metric-status {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.metric-status.good {
+  background: #d4edda;
+  color: #155724;
+}
+
+.metric-status.warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.metric-status.danger {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Charts */
+.charts-row {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.charts-row.two-columns {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.chart-card {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+}
+
+.chart-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.chart-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.chart-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.chart-info {
+  font-size: 0.85rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legend-item {
+  font-size: 0.85rem;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-item::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.power-legend::before {
+  background: #52b788;
+}
+
+.voltage-legend::before {
+  background: #2196F3;
+}
+
+.current-legend::before {
+  background: #5E35B1;
+}
+
+/* Device Breakdown */
+.device-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.device-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.device-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.device-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+}
+
+.device-value {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.device-percentage {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 0.9rem;
+  min-width: 45px;
+  text-align: right;
+}
+
+/* Statistics Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.stat-item:hover {
+  background: #f0f1f3;
+  transform: translateX(4px);
+}
+
+.stat-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.stat-icon.blue {
+  background: #e3f2fd;
+}
+
+.stat-icon.green {
+  background: #e8f5e9;
+}
+
+.stat-icon.purple {
+  background: #f3e5f5;
+}
+
+.stat-icon.orange {
+  background: #fff3e0;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #718096;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.15rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.stat-time {
+  font-size: 0.75rem;
+  color: #95a5a6;
+}
+
+/* Export Section */
+.export-section {
+  margin-top: 2rem;
+}
+
+.export-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.export-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.export-description {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-export {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-export:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .charts-row.two-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .live-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .time-range-selector {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .range-btn {
+    flex: 1;
+    padding: 0.75rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .export-card {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .export-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-export {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .chart-legend {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .live-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+  }
+
+  .device-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .device-percentage {
+    text-align: left;
+  }
+}
+
+/* Chart Tooltip Customization */
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+.recharts-default-tooltip {
+  background: white !important;
+  border: 1px solid #e9ecef !important;
+  border-radius: 8px !important;
+  padding: 0.75rem !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.recharts-tooltip-label {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.recharts-tooltip-item {
+  color: #718096 !important;
+  font-size: 0.85rem;
+}
